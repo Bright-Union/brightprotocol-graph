@@ -1,8 +1,7 @@
-# BrightProtocol - Coverage sales graphs
+# BrightUnion Distributors protocol - Coverage sales graphs
 
 The Graph protocol implementation of the Bright Union [risk coverage](https://app.brightunion.io/coverages) sales.
 ## Subgraphs ##
-
 
 1.- Insurace
  - Mainnet (Coming soon)
@@ -21,7 +20,7 @@ The Graph protocol implementation of the Bright Union [risk coverage](https://ap
  - BSC
     - Contract Address: [0x68f4c3a5ac3ea721c67fc1061e02d39fb55e9fa9](https://bscscan.com/address/0x68f4c3a5ac3ea721c67fc1061e02d39fb55e9fa9)
     - Implementation : [0x831DadaA0e6cDc250CBcd76bAe6e441a46423B94](https://bscscan.com/address/0x831dadaa0e6cdc250cbcd76bae6e441a46423b94)
-    - Explorer: [GraphiQL]( )
+    - Explorer: [GraphiQL](https://api.thegraph.com/subgraphs/name/danielifg/brightprotocolbsc)
     - Indexing start date: Nov-18-2021 02:42:12 PM +UTC (12753267)
 
 
@@ -34,6 +33,13 @@ The Graph protocol implementation of the Bright Union [risk coverage](https://ap
     - Impl: [0x22D198bE7ab10F31e6d2825c719f1b52534fd56e](https://etherscan.io/address/0x22d198be7ab10f31e6d2825c719f1b52534fd56e#code)
     - Explorer: [GraphiQL]()
 
+## Create subgraph from verified contract
+```console
+graph init \
+  --product hosted-service
+  --from-contract <CONTRACT_ADDRESS> \
+  <GITHUB_USER>/<SUBGRAPH_NAME> [<DIRECTORY>]
+```
 ## Update Subgraph ##
 
 ### Requirements ###

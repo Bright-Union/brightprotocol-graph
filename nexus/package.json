@@ -1,0 +1,16 @@
+{
+  "name": "brightprotocol",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ danielifg/brightprotocol",
+    "create-local": "graph create --node http://localhost:8020/ danielifg/brightprotocol",
+    "remove-local": "graph remove --node http://localhost:8020/ danielifg/brightprotocol",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 danielifg/brightprotocol"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.26.0",
+    "@graphprotocol/graph-ts": "0.24.1"
+  }
+}

@@ -1,0 +1,43 @@
+specVersion: 0.0.2
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Distributor
+    network: mainnet
+    source:
+      address: "0x22D198bE7ab10F31e6d2825c719f1b52534fd56e"
+      abi: Distributor
+      startBlock: 12919713
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - ClaimPayoutRedeemed
+        - ClaimSubmitted
+        - CoverBought
+        - OwnershipTransferred
+        - Transfer
+      abis:
+        - name: Distributor
+          file: Distributor/abis/Distributor.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: ClaimPayoutRedeemed(indexed uint256,indexed uint256,indexed
+            address,uint256,address)
+          handler: handleClaimPayoutRedeemed
+        - event: ClaimSubmitted(indexed uint256,indexed uint256,indexed address)
+          handler: handleClaimSubmitted
+        - event: CoverBought(indexed uint256,indexed address,indexed address,uint256,uint256)
+          handler: handleCoverBought
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: Distributor/Distributor.wasm
