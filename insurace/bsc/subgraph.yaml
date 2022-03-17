@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: InsuraceDistributor
-    network: matic
+    network: bsc
     source:
-      address: "0x371BdDD1321D24C130d79Ec85f125dd34928B054"
+      address: "0x68f4c3a5ac3ea721c67fc1061e02d39fb55e9fa9"
       abi: InsuraceDistributor
-      startBlock: 21512216 #(Nov-18-2021 10:19:51 AM +UTC)
+      startBlock: 12753267 #(Nov-18-2021 02:42:12 PM +UTC)
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
