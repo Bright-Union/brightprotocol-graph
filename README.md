@@ -1,4 +1,4 @@
-# BrightUnion Distributors protocol - Coverage sales graphs
+# BrightProtocol - Coverage sales graphs
 
 The Graph protocol implementation of the Bright Union [risk coverage](https://app.brightunion.io/coverages) sales.
 ## Subgraphs ##
