@@ -1,0 +1,9 @@
+type BuyCoverEvent @entity {
+  id: ID!
+  _productAddress: Bytes!
+  _productId: BigInt!
+  _period: BigInt!
+  _asset: Bytes!
+  _amount: BigInt!
+  _price: BigInt!
+}   
