@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: schema.graphql
+  file: ./schema.graphql
 dataSources:
   - kind: ethereum
     name: InsuraceDistributor
@@ -8,7 +8,7 @@ dataSources:
     source:
       address: "0x375d9567b483814d1275869b543101b725779b67"
       abi: InsuraceDistributor
-      startBlock: 11943843
+      startBlock: 11943843 # Mar-10-2022 07:25:23 PM +UTC
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -18,10 +18,10 @@ dataSources:
         - OwnershipTransferred
       abis:
         - name: InsuraceDistributor
-          file: InsuraceDistributor/abis/InsuraceDistributor.json
+          file: ./abis/InsuraceDistributor.json
       eventHandlers:
         - event: BuyCoverEvent(address,uint256,uint256,address,uint256,uint256)
           handler: handleBuyCoverEvent
         - event: OwnershipTransferred(indexed address,indexed address)
           handler: handleOwnershipTransferred
-      file: InsuraceDistributor/InsuraceDistributor.wasm
+      file: ./src/mapping.ts

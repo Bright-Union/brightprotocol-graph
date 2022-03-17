@@ -1,5 +1,5 @@
 {
-  "name": "brightprotocolmaticproxy",
+  "name": "brightprotocol-graphy",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
