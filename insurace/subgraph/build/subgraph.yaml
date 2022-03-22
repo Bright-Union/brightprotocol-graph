@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: InsuraceDistributor
-    network: avalanche
+    network: mainnet
     source:
-      address: "0x375d9567b483814d1275869b543101b725779b67"
+      address: "0x98fb0e1191651b6292d3482cebf54e6d35542ca4"
       abi: InsuraceDistributor
-      startBlock: 11943843
+      startBlock: 14416212
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
