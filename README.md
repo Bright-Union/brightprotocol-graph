@@ -7,7 +7,7 @@ The Graph protocol implementation of the Bright Union [risk coverage](https://ap
  - Ethereum (Mainnet)
     - Contract Address: [0x98fb0e1191651b6292d3482cebf54e6d35542ca4](https://etherscan.io/address/0x98fb0e1191651b6292d3482cebf54e6d35542ca4)
     - Implementation: [0xbAD2C0aEE340e88a4765eE78b55cB787c9DC3D81](https://etherscan.io/address/0xbad2c0aee340e88a4765ee78b55cb787c9dc3d81#code) 
-    - Explorer: [GraphiQL]( )
+    - Explorer: [GraphiQL](https://api.thegraph.com/subgraphs/name/danielifg/insuracesaleseth/graphql)
     - Indexing start date: Mar-19-2022 10:04:26 AM +UTC (14416212)
 
  - Polygon (Matic)
