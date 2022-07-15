@@ -1,0 +1,25 @@
+name: Deploy Graph
+
+on:
+  push:
+    branches: main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Install
+        run: npm ci
+      - name: Codegen
+        run: graph codegen
+      - name: Build
+        run: graph build
+      - name: Auth
+        run: graph auth --studio 07d6a27661857c3a7cf072ce9360d355
+      - name: Deploy
+        run: graph deploy --studio brightunion_distributors

@@ -1,0 +1,104 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: nexus_distributor
+    network: mainnet
+    source:
+      address: "0x3756c3c9374f38e0d9aacb637fed1641504a5b28"
+      abi: nexus_distributor
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - AdminChanged
+        - BeaconUpgraded
+        - Upgraded
+      abis:
+        - name: nexus_distributor
+          file: ./abis/nexus_distributor.json
+      eventHandlers:
+        - event: AdminChanged(address,address)
+          handler: handleAdminChanged
+        - event: BeaconUpgraded(indexed address)
+          handler: handleBeaconUpgraded
+        - event: Upgraded(indexed address)
+          handler: handleUpgraded
+      file: ./src/nexus-distributor.ts
+  - kind: ethereum
+    name: bridge_distributor
+    network: mainnet
+    source:
+      address: "0x213ffaca158c4f8863c1980a41c25f34fb0b95e0"
+      abi: bridge_distributor
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - bridge_distributorAdminChanged
+        - bridge_distributorBeaconUpgraded
+        - bridge_distributorUpgraded
+      abis:
+        - name: bridge_distributor
+          file: ./abis/bridge_distributor.json
+      eventHandlers:
+        - event: bridge_distributorAdminChanged(address,address)
+          handler: handlebridge_distributorAdminChanged
+        - event: bridge_distributorBeaconUpgraded(indexed address)
+          handler: handlebridge_distributorBeaconUpgraded
+        - event: bridge_distributorUpgraded(indexed address)
+          handler: handlebridge_distributorUpgraded
+      file: ./src/bridge-distributor.ts
+  - kind: ethereum
+    name: insurace_distributor
+    network: mainnet
+    source:
+      address: "0x98fb0e1191651b6292d3482cebf54e6d35542ca4"
+      abi: insurace_distributor
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - insurace_distributorAdminChanged
+        - insurace_distributorBeaconUpgraded
+        - insurace_distributorUpgraded
+      abis:
+        - name: insurace_distributor
+          file: ./abis/insurace_distributor.json
+      eventHandlers:
+        - event: insurace_distributorAdminChanged(address,address)
+          handler: handleinsurace_distributorAdminChanged
+        - event: insurace_distributorBeaconUpgraded(indexed address)
+          handler: handleinsurace_distributorBeaconUpgraded
+        - event: insurace_distributorUpgraded(indexed address)
+          handler: handleinsurace_distributorUpgraded
+      file: ./src/insurace-distributor.ts
+  - kind: ethereum
+    name: ease_distributor
+    network: mainnet
+    source:
+      address: "0xF11186032dF1E2723600A253A975fcb3dC7bd419"
+      abi: ease_distributor
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - ease_distributorAdminChanged
+        - ease_distributorBeaconUpgraded
+        - ease_distributorUpgraded
+      abis:
+        - name: ease_distributor
+          file: ./abis/ease_distributor.json
+      eventHandlers:
+        - event: ease_distributorAdminChanged(address,address)
+          handler: handleease_distributorAdminChanged
+        - event: ease_distributorBeaconUpgraded(indexed address)
+          handler: handleease_distributorBeaconUpgraded
+        - event: ease_distributorUpgraded(indexed address)
+          handler: handleease_distributorUpgraded
+      file: ./src/ease-distributor.ts

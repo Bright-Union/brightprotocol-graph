@@ -1,0 +1,16 @@
+{
+  "mainnet": {
+    "nexus_distributor": {
+      "address": "0x3756c3c9374f38e0d9aacb637fed1641504a5b28"
+    },
+    "bridge_distributor": {
+      "address": "0x213ffaca158c4f8863c1980a41c25f34fb0b95e0"
+    },
+    "insurace_distributor": {
+      "address": "0x98fb0e1191651b6292d3482cebf54e6d35542ca4"
+    },
+    "ease_distributor": {
+      "address": "0xF11186032dF1E2723600A253A975fcb3dC7bd419"
+    }
+  }
+}

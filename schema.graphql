@@ -1,0 +1,51 @@
+type ExampleEntity @entity {
+  id: ID!
+  count: BigInt!
+  previousAdmin: Bytes! # address
+  newAdmin: Bytes! # address
+}
+type bridge_distributorAdminChanged @entity {
+  id: ID!
+  previousAdmin: Bytes! # address
+  newAdmin: Bytes! # address
+}
+
+type bridge_distributorBeaconUpgraded @entity {
+  id: ID!
+  beacon: Bytes! # address
+}
+
+type bridge_distributorUpgraded @entity {
+  id: ID!
+  implementation: Bytes! # address
+}
+type insurace_distributorAdminChanged @entity {
+  id: ID!
+  previousAdmin: Bytes! # address
+  newAdmin: Bytes! # address
+}
+
+type insurace_distributorBeaconUpgraded @entity {
+  id: ID!
+  beacon: Bytes! # address
+}
+
+type insurace_distributorUpgraded @entity {
+  id: ID!
+  implementation: Bytes! # address
+}
+type ease_distributorAdminChanged @entity {
+  id: ID!
+  previousAdmin: Bytes! # address
+  newAdmin: Bytes! # address
+}
+
+type ease_distributorBeaconUpgraded @entity {
+  id: ID!
+  beacon: Bytes! # address
+}
+
+type ease_distributorUpgraded @entity {
+  id: ID!
+  implementation: Bytes! # address
+}
