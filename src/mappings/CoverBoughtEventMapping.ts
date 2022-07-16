@@ -1,9 +1,7 @@
-import {CoverBought as CoverBoughtEvent} from "../../archive/nexus/generated/Distributor/Distributor";
-import {CoverBought} from "../../archive/nexus/generated/schema";
+import {CoverBought as CoverBoughtEvent} from '../../generated/nexus_distributor/nexus_distributor';
+import {CoverBought} from "../entities/CoverBought.entity";
 
-export function handleApproval(event: CoverBoughtEvent): void {
-    // Entities can be loaded from the store using a string ID; this ID
-    // needs to be unique across all entities of the same type
+export function handleCoverBought(event: CoverBoughtEvent): void {
     let entity = new CoverBought(
         event.transaction.hash.toHex() + "-" + event.logIndex.toString()
     )

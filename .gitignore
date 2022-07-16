@@ -218,3 +218,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+#The Graph
+build/
+data/
+generated/
+
+
+.DS_Store
