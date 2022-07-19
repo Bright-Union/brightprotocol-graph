@@ -1,4 +1,4 @@
-import {BigInt, Bytes, Entity, store, Value, ValueKind} from "@graphprotocol/graph-ts/index";
+import {BigInt, Bytes, DataSourceContext, Entity, store, Value, ValueKind} from "@graphprotocol/graph-ts/index";
 
 export class CoverBought extends Entity {
     constructor(id: string) {
@@ -9,6 +9,9 @@ export class CoverBought extends Entity {
         this.set("buyer", Value.fromBytes(Bytes.empty()));
         this.set("contractAddress", Value.fromBytes(Bytes.empty()));
         this.set("coverPrice", Value.fromBytes(Bytes.empty()));
+        this.set("network", Value.fromBytes(Bytes.empty()));
+        this.set("distributor", Value.fromBytes(Bytes.empty()));
+
     }
 
     save(): void {
@@ -90,4 +93,23 @@ export class CoverBought extends Entity {
     set coverPrice(value: BigInt) {
         this.set("coverPrice", Value.fromBigInt(value));
     }
+
+    get network(): string {
+        let value = this.get("network");
+        return value!.toString();
+    }
+
+    set network(value: string) {
+        this.set("network", Value.fromString(value));
+    }
+
+    get distributor(): Bytes {
+        let value = this.get("distributor");
+        return value!.toBytes();
+    }
+
+    set distributor(value: Bytes) {
+        this.set("distributor", Value.fromBytes(value));
+    }
+
 }

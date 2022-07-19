@@ -6,9 +6,9 @@ dataSources:
     name: nexus_distributor
     network: mainnet
     source:
-      address: "0x3756c3c9374f38e0d9aacb637fed1641504a5b28"
+      address: "0x0000000000000000000000000000000000000000"
       abi: IDistributor
-      startBlock: 12919713 # Jul-29-2021 08:42:48 AM +UTC)
+      startBlock: 13212759
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -19,16 +19,17 @@ dataSources:
         - name: IDistributor
           file: ./abis/IDistributor.json
       eventHandlers:
-        - event: CoverBought(indexed uint256,indexed address,indexed address,uint256,uint256)
+        - event: CoverBought(indexed uint256,indexed address,indexed
+            address,uint256,uint256)
           handler: handleCoverBought
-      file: ./src/index.ts
+      file: ./src/mapping.ts
   - kind: ethereum
     name: insurace_distributor
     network: mainnet
     source:
       address: "0x98fb0e1191651b6292d3482cebf54e6d35542ca4"
       abi: IDistributor
-      startBlock: 14416212 # Mar-19-2022 10:04:26 AM +UTC
+      startBlock: 14416212
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -39,16 +40,17 @@ dataSources:
         - name: IDistributor
           file: ./abis/IDistributor.json
       eventHandlers:
-        - event: CoverBought(indexed uint256,indexed address,indexed address,uint256,uint256)
+        - event: CoverBought(indexed uint256,indexed address,indexed
+            address,uint256,uint256)
           handler: handleCoverBought
-      file: ./src/index.ts
+      file: ./src/mapping.ts
   - kind: ethereum
     name: ease_distributor
     network: mainnet
     source:
       address: "0xF11186032dF1E2723600A253A975fcb3dC7bd419"
       abi: IDistributor
-      startBlock: 14416212 # Mar-19-2022 10:04:26 AM +UTC
+      startBlock: 15135842
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -59,31 +61,7 @@ dataSources:
         - name: IDistributor
           file: ./abis/IDistributor.json
       eventHandlers:
-        - event: CoverBought(indexed uint256,indexed address,indexed address,uint256,uint256)
+        - event: CoverBought(indexed uint256,indexed address,indexed
+            address,uint256,uint256)
           handler: handleCoverBought
-      file: ./src/index.ts
-#  - kind: ethereum
-#    name: bridge_distributor
-#    network: mainnet
-#    source:
-#      address: "0x213ffaca158c4f8863c1980a41c25f34fb0b95e0"
-#      abi: bridge_distributor
-#    mapping:
-#      kind: ethereum/events
-#      apiVersion: 0.0.5
-#      language: wasm/assemblyscript
-#      entities:
-#        - bridge_distributorAdminChanged
-#        - bridge_distributorBeaconUpgraded
-#        - bridge_distributorUpgraded
-#      abis:
-#        - name: bridge_distributor
-#          file: ./abis/bridge_distributor.json
-#      eventHandlers:
-#        - event: bridge_distributorAdminChanged(address,address)
-#          handler: handlebridge_distributorAdminChanged
-#        - event: bridge_distributorBeaconUpgraded(indexed address)
-#          handler: handlebridge_distributorBeaconUpgraded
-#        - event: bridge_distributorUpgraded(indexed address)
-#          handler: handlebridge_distributorUpgraded
-#      file: ./src/bridge-distributor.ts
+      file: ./src/mapping.ts
