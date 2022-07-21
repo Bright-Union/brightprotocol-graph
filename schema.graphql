@@ -1,0 +1,10 @@
+type CoverBought @entity {
+  id: ID!
+  coverId: BigInt!
+  buyer: Bytes! # address
+  contractAddress: Bytes! # address
+  feePercentage: BigInt!
+  coverPrice: BigInt!
+  network: String!
+  distributor: Bytes!
+}
