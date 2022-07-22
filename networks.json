@@ -1,34 +1,45 @@
 {
-  "mainnet": {
-    "nexus_distributor": {
-      "address": "0x0000000000000000000000000000000000000000",
+  "mainnet": [
+    {
+      "name": "nexus_distributor",
+      "address": "0x3756c3c9374f38e0d9aacb637fed1641504a5b28",
       "startBlock": 13212759
     },
-    "insurace_distributor": {
+    {
+      "name": "nexus_distributor_v2",
+      "address": "0x425b3a68f1fd5de26b4b9f4be8049e36406b187a",
+      "startBlock": 13212759
+    },
+    {
+      "name": "insurace_distributor",
       "address": "0x98fb0e1191651b6292d3482cebf54e6d35542ca4",
       "startBlock": 14416212
     },
-    "ease_distributor": {
+    {
+      "name": "ease_distributor",
       "address": "0xF11186032dF1E2723600A253A975fcb3dC7bd419",
       "startBlock": 15135842
     }
-  },
-  "bsc": {
-    "insurace_distributor": {
+  ],
+  "bsc": [
+    {
+      "name": "insurace_distributor",
       "address": "0x68f4c3a5ac3ea721c67fc1061e02d39fb55e9fa9",
       "startBlock": 12753267
     }
-  },
-  "matic": {
-    "insurace_distributor": {
+  ],
+  "matic": [
+    {
+      "name": "insurace_distributor",
       "address": "0x371BdDD1321D24C130d79Ec85f125dd34928B054",
       "startBlock": 21512216
     }
-  },
-  "avalanche": {
-    "insurace_distributor": {
+  ],
+  "avalanche": [
+    {
+      "name": "insurace_distributor",
       "address": "0x375d9567b483814d1275869b543101b725779b67",
       "startBlock": 11943843
     }
-  }
+  ]
 }

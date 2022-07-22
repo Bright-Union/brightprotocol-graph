@@ -1,0 +1,27 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  {{#mainnet}}
+  - kind: ethereum
+    name: {{name}}
+    network: mainnet
+    source:
+      address: "{{address}}"
+      abi: IDistributor
+      startBlock: {{startBlock}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - CoverBought
+      abis:
+        - name: IDistributor
+          file: ./abis/IDistributor.json
+      eventHandlers:
+        - event: CoverBought(indexed uint256,indexed address,indexed
+            address,uint256,uint256)
+          handler: handleCoverBought
+      file: ./src/mapping.ts
+    {{/mainnet}}
