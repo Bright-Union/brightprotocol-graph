@@ -3,43 +3,92 @@
     {
       "name": "nexus_distributor",
       "address": "0x3756c3c9374f38e0d9aacb637fed1641504a5b28",
-      "startBlock": 13212759
+      "startBlock": 13212759,
+      "abi": "IDistributor_Nexus",
+      "events": [
+        {
+          "event": "CoverBought(indexed uint256,indexed address,indexed address,uint256,uint256)",
+          "handler:": "handleCoverBought"
+        }
+      ]
     },
     {
       "name": "nexus_distributor_v2",
       "address": "0x425b3a68f1fd5de26b4b9f4be8049e36406b187a",
-      "startBlock": 13212759
+      "startBlock": 13212759,
+      "abi": "IDistributor_Nexus",
+      "events": [
+        {
+          "event": "CoverBought(indexed uint256,indexed address,indexed address,uint256,uint256)",
+          "handler:": "handleCoverBought"
+        }
+      ]
     },
     {
       "name": "insurace_distributor",
       "address": "0x98fb0e1191651b6292d3482cebf54e6d35542ca4",
-      "startBlock": 14416212
+      "startBlock": 14416212,
+      "abi": "IDistributor",
+      "events": [
+        {
+          "event": "BuyCoverEvent(address,uint256,uint256,address,uint256,uint256)",
+          "handler:": "handleCoverBought"
+        }
+      ]
     },
     {
       "name": "ease_distributor",
       "address": "0xF11186032dF1E2723600A253A975fcb3dC7bd419",
-      "startBlock": 15135842
+      "startBlock": 15135842,
+      "abi": "IDistributor",
+      "events": [
+        {
+          "event": "BuyCoverEvent(address,uint256,uint256,address,uint256,uint256)",
+          "handler:": "handleCoverBought"
+        }
+      ]
     }
   ],
   "bsc": [
     {
       "name": "insurace_distributor",
       "address": "0x68f4c3a5ac3ea721c67fc1061e02d39fb55e9fa9",
-      "startBlock": 12753267
+      "startBlock": 12753267,
+      "abi": "IDistributor",
+      "events": [
+        {
+          "event": "BuyCoverEvent(address,uint256,uint256,address,uint256,uint256)",
+          "handler:": "handleCoverBought"
+        }
+      ]
     }
   ],
   "matic": [
     {
       "name": "insurace_distributor",
       "address": "0x371BdDD1321D24C130d79Ec85f125dd34928B054",
-      "startBlock": 21512216
+      "startBlock": 21512216,
+      "abi": "IDistributor",
+      "events": [
+        {
+          "event": "BuyCoverEvent(address,uint256,uint256,address,uint256,uint256)",
+          "handler:": "handleCoverBought"
+        }
+      ]
     }
   ],
   "avalanche": [
     {
       "name": "insurace_distributor",
       "address": "0x375d9567b483814d1275869b543101b725779b67",
-      "startBlock": 11943843
+      "startBlock": 11943843,
+      "abi": "IDistributor",
+      "events": [
+        {
+          "event": "BuyCoverEvent(address,uint256,uint256,address,uint256,uint256)",
+          "handler:": "handleCoverBought"
+        }
+      ]
     }
   ]
 }

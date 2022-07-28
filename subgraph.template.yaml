@@ -8,7 +8,7 @@ dataSources:
     network: mainnet
     source:
       address: "{{address}}"
-      abi: IDistributor
+      abi: {{abi}}
       startBlock: {{startBlock}}
     mapping:
       kind: ethereum/events
@@ -17,11 +17,12 @@ dataSources:
       entities:
         - CoverBought
       abis:
-        - name: IDistributor
-          file: ./abis/IDistributor.json
+        - name: {{abi}}
+          file: ./abis/{{abi}}.json
       eventHandlers:
-        - event: CoverBought(indexed uint256,indexed address,indexed
-            address,uint256,uint256)
+        {{#events}}
+        - event: {{event}}
           handler: handleCoverBought
+        {{/events}}
       file: ./src/mapping.ts
     {{/mainnet}}
