@@ -11,6 +11,7 @@ export class CoverBought extends Entity {
         this.set("coverPrice", Value.fromBytes(Bytes.empty()));
         this.set("network", Value.fromBytes(Bytes.empty()));
         this.set("distributor", Value.fromBytes(Bytes.empty()));
+        this.set("blockNumber", Value.fromBytes(Bytes.empty()));
 
     }
 

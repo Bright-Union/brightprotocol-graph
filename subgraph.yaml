@@ -7,43 +7,44 @@ dataSources:
     network: mainnet
     source:
       address: "0x3756c3c9374f38e0d9aacb637fed1641504a5b28"
-      abi: IDistributor_Nexus
+      abi: nexus_distributor
       startBlock: 13212759
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
       language: wasm/assemblyscript
       entities:
-        - CoverBought
+        - BuyCoverEvent
       abis:
-        - name: IDistributor_Nexus
-          file: ./abis/IDistributor_Nexus.json
+        - name: nexus_distributor
+          file: ./abis/nexus_distributor.json
       eventHandlers:
-        - event: CoverBought(indexed uint256,indexed address,indexed address,uint256,uint256)
+        - event: CoverBought(indexed uint256,indexed address,indexed
+            address,uint256,uint256)
           handler: handleCoverBought
       file: ./src/mapping.ts
   - kind: ethereum
-    name: nexus_distributor_v2
+    name: nexus_v2
     network: mainnet
     source:
       address: "0x425b3a68f1fd5de26b4b9f4be8049e36406b187a"
-      abi: IDistributor_Nexus
+      abi: IDistributor
       startBlock: 13212759
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
       language: wasm/assemblyscript
       entities:
-        - CoverBought
+        - BuyCoverEvent
       abis:
-        - name: IDistributor_Nexus
-          file: ./abis/IDistributor_Nexus.json
+        - name: IDistributor
+          file: ./abis/IDistributor.json
       eventHandlers:
-        - event: CoverBought(indexed uint256,indexed address,indexed address,uint256,uint256)
-          handler: handleCoverBought
+        - event: BuyCoverEvent(address,uint256,uint256,address,uint256,uint256)
+          handler: handleBuyCoverEvent
       file: ./src/mapping.ts
   - kind: ethereum
-    name: insurace_distributor
+    name: insurace
     network: mainnet
     source:
       address: "0x98fb0e1191651b6292d3482cebf54e6d35542ca4"
@@ -54,16 +55,16 @@ dataSources:
       apiVersion: 0.0.5
       language: wasm/assemblyscript
       entities:
-        - CoverBought
+        - BuyCoverEvent
       abis:
         - name: IDistributor
           file: ./abis/IDistributor.json
       eventHandlers:
         - event: BuyCoverEvent(address,uint256,uint256,address,uint256,uint256)
-          handler: handleCoverBought
+          handler: handleBuyCoverEvent
       file: ./src/mapping.ts
   - kind: ethereum
-    name: ease_distributor
+    name: ease
     network: mainnet
     source:
       address: "0xF11186032dF1E2723600A253A975fcb3dC7bd419"
@@ -74,11 +75,11 @@ dataSources:
       apiVersion: 0.0.5
       language: wasm/assemblyscript
       entities:
-        - CoverBought
+        - BuyCoverEvent
       abis:
         - name: IDistributor
           file: ./abis/IDistributor.json
       eventHandlers:
         - event: BuyCoverEvent(address,uint256,uint256,address,uint256,uint256)
-          handler: handleCoverBought
+          handler: handleBuyCoverEvent
       file: ./src/mapping.ts

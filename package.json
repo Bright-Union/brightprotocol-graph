@@ -4,12 +4,16 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "prep-subgraph": "mustache networks.json subgraph.template.yaml > subgraph.yaml",
+    "prep-subgraph:mainnet": "mustache networks_all.json subgraphs/mainnet.template.yaml > subgraph.yaml",
+    "prep-subgraph:matic": "mustache networks_all.json subgraphs/matic.template.yaml > subgraph.yaml",
+    "prep-subgraph:bsc": "mustache networks_all.json subgraphs/bsc.template.yaml > subgraph.yaml",
+    "prep-subgraph:avalanche": "mustache networks_all.json subgraphs/avalanche.template.yaml > subgraph.yaml",
     "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ brightunion_distributors",
     "create-local": "graph create --node http://localhost:8020/ brightunion_distributors",
     "remove-local": "graph remove --node http://localhost:8020/ brightunion_distributors",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 brightunion_distributors",
-    "deploy-studio": "graph build && graph deploy --studio bu-distributors-mainnet"
+    "deploy-studio": "graph build && graph deploy --studio bu-distributors-mainnet",
+    "deploy-hosted:bsc": "graph deploy --product hosted-service --network bsc bright-union/bu-distributors-avalanche"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.32.0",
