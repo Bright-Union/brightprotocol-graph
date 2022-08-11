@@ -1,10 +1,15 @@
-type CoverBought @entity {
+type BuyCoverEvent @entity {
   id: ID!
+  buyer: Bytes!
   coverId: BigInt!
-  buyer: Bytes! # address
-  contractAddress: Bytes! # address
-  feePercentage: BigInt!
-  coverPrice: BigInt!
+  expiry: BigInt!
+  contractAddress: Bytes!
+  amount: BigInt!
+  price: BigInt!
   network: String!
   distributor: Bytes!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+  transactionHash: Bytes!
+  asset: Bytes!
 }

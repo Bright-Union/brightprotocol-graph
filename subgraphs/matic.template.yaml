@@ -1,0 +1,26 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  {{#matic}}
+  - kind: ethereum
+    name: {{name}}
+    network: matic
+    source:
+      address: "{{address}}"
+      abi: IDistributor
+      startBlock: {{startBlock}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - BuyCoverEvent
+      abis:
+        - name: IDistributor
+          file: ./abis/IDistributor.json
+      eventHandlers:
+        - event: BuyCoverEvent(address,uint256,uint256,address,uint256,uint256)
+          handler: handleBuyCoverEvent
+      file: ./src/mapping.ts
+    {{/mainnet}}
