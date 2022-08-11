@@ -23,6 +23,8 @@ export class BuyCoverEvent extends Entity {
         this.set("distributor", Value.fromBytes(Bytes.empty()));
         this.set("timestamp", Value.fromBigInt(BigInt.zero()));
         this.set("blockNumber", Value.fromBigInt(BigInt.zero()));
+        this.set("transactionHash", Value.fromBytes(Bytes.empty()));
+        this.set("asset", Value.fromBytes(Bytes.empty()));
     }
 
     save(): void {
@@ -121,6 +123,24 @@ export class BuyCoverEvent extends Entity {
 
     set distributor(value: Bytes) {
         this.set("distributor", Value.fromBytes(value));
+    }
+
+    get transactionHash(): Bytes {
+        let value = this.get("transactionHash");
+        return value!.toBytes();
+    }
+
+    set transactionHash(value: Bytes) {
+        this.set("transactionHash", Value.fromBytes(value));
+    }
+
+    get asset(): Bytes {
+        let value = this.get("asset");
+        return value!.toBytes();
+    }
+
+    set asset(value: Bytes) {
+        this.set("asset", Value.fromBytes(value));
     }
 
     get timestamp(): BigInt {

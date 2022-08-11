@@ -10,4 +10,6 @@ type BuyCoverEvent @entity {
   distributor: Bytes!
   timestamp: BigInt!
   blockNumber: BigInt!
+  transactionHash: Bytes!
+  asset: Bytes!
 }
